@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root
+{
+    /* Colors */
+
+    /* Primary */
+
+    --Blue-500: hsl(215, 51%, 70%);
+    --Cyan-400: hsl(178, 100%, 50%);
+
+    /* Neutral */
+
+    --Blue-950-main-BG: hsl(217, 54%, 11%);
+    --Blue-900-card-BG: hsl(216, 50%, 16%);
+    --Blue-800-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+
+    /* Font's */
+
+    --body-font: "Outfit", sans-serif;
+}
+body
+{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background: var(--Blue-950-main-BG);
+    font-family: var(--body-font);
+}
+.card
+{
+    width: 450px;
+    background: var(--Blue-900-card-BG);
+    border-radius: 1.5rem;
+    padding: 28px;
+    box-shadow: 18px 25px 10px rgba(0, 0, 0, 0.15);
+}
+.card .card-content
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.imgs-box
+{
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card .card-content .imgs-box > img
+{
+    display: block;
+    width: 100%;
+    margin: auto;
+    border-radius: 1rem;
+}
+.imgs-box .overlay 
+{
+    position: absolute;
+    inset: 0;
+    background-color: hsla(178, 100%, 50%, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.imgs-box .overlay img 
+{
+    width: 35px;
+}
+.imgs-box:hover .overlay 
+{
+    opacity: 1;
+}
+.card .card-content h2
+{
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: var(--White);
+}
+.card .card-content p
+{
+    font-size: 18px;
+    color: var(--Blue-500);
+    font-weight: 300;
+    letter-spacing: 1.25px;
+    margin-bottom: 2rem;
+}
+.card .time-content 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card .time-content .eth
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px
+}
+.card .time-content .eth p
+{
+    color: var(--Cyan-400);
+    font-weight: 400;
+}
+.card .time-content .time
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.card .time-content .time p
+{
+    color: var(--Blue-500);
+    font-weight: 500;
+}
+.card .footer
+{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 25px 0;
+    padding: 20px 0;
+    border-top: 1px solid #cccccc57;
+}
+.card .footer img
+{
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+.card .footer p
+{
+    font-size: 18px;
+    color: var(--White);
+}
+.card .footer span
+{
+    font-size: 18px;
+    color: var(--Blue-500);
+}

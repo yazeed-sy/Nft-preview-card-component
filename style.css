@@ -86,6 +86,12 @@ body
     font-size: 1.75rem;
     font-weight: 500;
     color: var(--White);
+    transition: all 0.3s ease;
+}
+.card .card-content h2:hover
+{
+    color: var(--Cyan-400);
+    cursor: pointer;
 }
 .card .card-content p
 {
@@ -144,9 +150,16 @@ body
 {
     font-size: 18px;
     color: var(--White);
+    transition: all 0.3s ease;
+}
+.card .footer p:hover
+{
+    color: var(--Cyan-400);
+    cursor: pointer;
 }
 .card .footer span
 {
     font-size: 18px;
     color: var(--Blue-500);
+
 }
